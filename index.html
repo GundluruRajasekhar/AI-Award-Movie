@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Price of Love – Short Film Pitch</title>
+<style>
+:root{--bg:#f1f3f6;--panel:#fff;--ink:#1c2230;--mute:#5d6678;--line:#d5dae3;--gold:#b9801f;--warm:#1f7f86;--cold:#8a93a6}
+@media (prefers-color-scheme:dark){:root{--bg:#161b27;--panel:#1f2636;--ink:#eef1f6;--mute:#9aa4b8;--line:#333d54;--gold:#e3b04b;--warm:#4fc3c9;--cold:#6b7690}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,sans-serif}
+main{max-width:920px;margin:0 auto;padding:40px 20px 64px}
+h1{font:700 clamp(2.6rem,9vw,5.2rem)/1 Georgia,serif;margin:0 0 8px;letter-spacing:-.02em}
+h2{font:600 1.5rem Georgia,serif;margin:48px 0 12px}
+.tag{color:var(--mute);max-width:60ch;font-style:italic}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin:20px 0;color:var(--mute);font-size:.9rem}
+.meta b{color:var(--ink)}
+p{max-width:68ch}
+.stage{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px}
+.meters{display:grid;gap:14px;margin-bottom:18px}
+.m label{display:flex;justify-content:space-between;font-size:.85rem;color:var(--mute)}
+.bar{height:12px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;transition:width .5s}
+#w{background:var(--gold)}#h{background:var(--warm)}
+input[type=range]{width:100%;accent-color:var(--gold);margin:6px 0 14px}
+.scene h3{margin:0;font:600 1.25rem Georgia,serif}
+.scene .t{color:var(--mute);font-size:.85rem}
+.scene dl{margin:12px 0 0;display:grid;grid-template-columns:90px 1fr;gap:6px 12px}
+.scene dt{color:var(--mute);font-size:.85rem}.scene dd{margin:0}
+blockquote{margin:12px 0 0;padding-left:14px;border-left:3px solid var(--gold);font-family:Georgia,serif;font-size:1.1rem}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tabs button{border:1px solid var(--line);background:none;color:var(--ink);padding:6px 10px;border-radius:6px;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--warm);outline-offset:2px}
+ul.why{padding-left:20px}
+.end{margin-top:40px;padding:24px;border:1px solid var(--line);border-radius:10px;font:italic 1.15rem/1.5 Georgia,serif}
+footer{margin-top:32px;color:var(--mute);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<h1>The Price of Love</h1>
+<p class="tag">In a world where respect is earned by salary, one man discovers the true value of human dignity.</p>
+<div class="meta"><span><b>Theme</b> Human Relationships</span><span><b>Genre</b> Sci-Fi Drama / Social Drama</span><span><b>Runtime</b> 5–7 min</span><span><b>Format</b> 16:9</span></div>
+
+<h2>Synopsis</h2>
+<p>In 2028, a person's worth is measured by salary, job title, social status and digital influence. Arjun, a talented but underpaid teacher, watches friends, relatives and even the woman he loves respect wealth more than character.</p>
+<p>Driven by rejection, he climbs to become a respected technology leader and learns that money can buy attention, but not genuine relationships. When a crisis strikes, only the people who valued him before his success stand beside him.</p>
+
+<h2>Scrub the film</h2>
+<div class="stage">
+  <div class="meters">
+    <div class="m"><label><span>Arjun's status</span><span id="wv"></span></label><div class="bar"><i id="w"></i></div></div>
+    <div class="m"><label><span>People who truly stand beside him</span><span id="hv"></span></label><div class="bar"><i id="h"></i></div></div>
+  </div>
+  <div class="tabs" id="tabs" role="group" aria-label="Scenes"></div>
+  <input type="range" id="r" min="0" max="6" value="0" aria-label="Scene">
+  <div class="scene" id="sc" aria-live="polite"></div>
+</div>
+
+<h2>Why it can score highly</h2>
+<ul class="why">
+<li>Strong Human Relationships theme drawn from a real, widespread social issue</li>
+<li>Personal struggle and transformation that rich and poor audiences both recognise</li>
+<li>A universal closing message that stays with an international jury</li>
+<li>Achievable with 70%+ Seedance-generated cinematic scenes</li>
+</ul>
+
+<div class="end">“A society that values people only by status loses its humanity. Relationships built on dignity, kindness, and respect are what truly keep humanity alive.”</div>
+<footer>Gundluru Rajasekhar · <a href="https://github.com/Gundlururajasekhar" style="color:inherit">GitHub</a></footer>
+</main>
+<script>
+const S=[
+{n:"The Invisible Man",t:"0:00–1:00",v:"Busy city, luxury cars, corporate towers, influencers; Arjun rides the bus",a:"Narrator: “They said every person is equal. But in 2028, equality had become a forgotten dream.”",e:"Sadness and loneliness",w:10,h:60},
+{n:"Respect Has a Price",t:"1:00–2:00",v:"Family gathering; a Google Director arrives and is welcomed; nobody notices Arjun",a:"Arjun: “I'm a school teacher.” Awkward silence.",e:"Humiliation",w:10,h:50},
+{n:"Love Without Status",t:"2:00–3:00",v:"Arjun proposes; her parents ask about salary, position, assets",a:"Father: “Love is important. But financial security matters more.”",e:"Heartbreak",w:10,h:35},
+{n:"Rise of the Machine Age",t:"3:00–4:00",v:"AI replacing jobs, promotion races, digital rankings",a:"Narration: “The world was no longer asking who you are. It was asking what you earn.”",e:"Fear and pressure",w:25,h:30},
+{n:"Transformation",t:"4:00–5:00",v:"Arjun learns AI, studies day and night, builds projects, starts a company",a:"Arjun: “If society respects success, I will redefine success.”",e:"Determination",w:65,h:25},
+{n:"The Reality of Success",t:"5:00–6:00",v:"Luxury office, expensive lifestyle, everyone suddenly respects him",a:"Arjun: “When I had dreams, nobody listened. When I had money, everyone did.”",e:"Bittersweet success",w:95,h:15},
+{n:"Humanity's Choice",t:"6:00–7:00",v:"A former teacher colleague helps in a crisis; simple people stand by him; wealthy acquaintances disappear",a:"Arjun: “Money can open doors. But only humanity can open hearts.”",e:"Hope and dignity",w:95,h:90}];
+const r=document.getElementById('r'),tabs=document.getElementById('tabs'),sc=document.getElementById('sc');
+S.forEach((s,i)=>{const b=document.createElement('button');b.textContent=s.t.split('–')[0];b.title=s.n;b.onclick=()=>{r.value=i;show(i)};tabs.appendChild(b)});
+function show(i){const s=S[i];
+[...tabs.children].forEach((b,j)=>b.setAttribute('aria-pressed',j==i));
+w.style.width=s.w+'%';h.style.width=s.h+'%';wv.textContent=s.w+'%';hv.textContent=s.h+'%';
+sc.innerHTML=`<h3>Scene ${i+1}: ${s.n}</h3><div class="t">${s.t}</div><dl><dt>Visual</dt><dd>${s.v}</dd><dt>Emotion</dt><dd>${s.e}</dd></dl><blockquote>${s.a}</blockquote>`}
+r.oninput=()=>show(+r.value);show(0);
+</script>
+</body>
+</html>
